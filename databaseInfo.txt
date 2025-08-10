@@ -1,0 +1,22 @@
+Host: localhost
+Username: supermart
+Password: supermart123
+Database Name: supermart
+
+
+CREATE USER 'supermart'@'localhost' IDENTIFIED WITH caching_sha2_password BY '***';
+GRANT ALL PRIVILEGES ON *.* TO 'supermart'@'localhost' WITH GRANT OPTION;
+ALTER USER 'supermart'@'localhost' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+CREATE DATABASE IF NOT EXISTS `supermart`;
+GRANT ALL PRIVILEGES ON `supermart`.* TO 'supermart'@'localhost';
+GRANT ALL PRIVILEGES ON `supermart\_%`.* TO 'supermart'@'localhost';
+
+CREATE TABLE IF NOT EXISTS `items` (
+  `item_id` int NOT NULL,
+  `item_name` varchar(50) NOT NULL,
+  `item_price` mediumint NOT NULL,
+  `item_manufactured_date` date NOT NULL,
+  `item_expiry_date` date NOT NULL,
+  `item_suppliers` varchar(50) NOT NULL,
+  `item_quantity` smallint NOT NULL
+) ENGINE=MyISAM 
