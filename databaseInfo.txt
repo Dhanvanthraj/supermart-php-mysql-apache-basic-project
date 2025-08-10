@@ -20,3 +20,16 @@ CREATE TABLE IF NOT EXISTS `items` (
   `item_suppliers` varchar(50) NOT NULL,
   `item_quantity` smallint NOT NULL
 ) ENGINE=MyISAM 
+
+CREATE TABLE IF NOT EXISTS `customers` (
+  `customer_id` int NOT NULL,
+  `customer_name` varchar(50) NOT NULL,
+  `customer_mobile` int NOT NULL,
+  `customer_alternate_no` int NOT NULL,
+  `customer_address` varchar(100) NOT NULL,
+  `customer_email` varchar(50) NOT NULL,
+  `customer_balance` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`customer_id`),
+  UNIQUE KEY `customer_mobile` (`customer_mobile`),
+  UNIQUE KEY `unique` (`customer_alternate_no`)
+) ENGINE=MyISAM
