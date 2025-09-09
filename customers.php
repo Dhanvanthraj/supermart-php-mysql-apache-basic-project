@@ -2,7 +2,18 @@
 // db.php is assumed to have the database connection
 include 'db.php';
 
-$result = $conn->query("SELECT * FROM customers");
+// Query to check table structure
+$table_check = $conn->query("DESCRIBE customers");
+if ($table_check) {
+    while ($row = $table_check->fetch_assoc()) {
+        error_log("Field: " . $row['Field'] . " Type: " . $row['Type']);
+    }
+}
+
+$result = $conn->query("SELECT customer_id, customer_name, customer_email, customer_mobile, customer_address FROM customers");
+if (!$result) {
+    die("Error in query: " . $conn->error);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -51,8 +62,12 @@ $result = $conn->query("SELECT * FROM customers");
                 <td><?= htmlspecialchars($row['customer_mobile']) ?></td>
                 <td><?= htmlspecialchars($row['customer_address']) ?></td>
                 <td>
-                    <a href="edit_customer.php?customer_id=<?= $row['customer_id'] ?>" class="btn btn-sm btn-warning me-1">Edit</a>
-                    <a href="delete_customer.php?customer_id=<?= $row['customer_id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Delete this customer?');">Delete</a>
+                        <a href="edit_customer.php?id=<?= $row['customer_id'] ?>" class="btn btn-sm btn-primary">
+                            <i class="fa fa-edit"></i> Edit
+                        </a>&nbsp;
+                        <a href="delete_customer.php?id=<?= $row['customer_id'] ?>" class="btn btn-sm btn-danger">
+                            <i class="fa fa-trash"></i> Delete
+                        </a>
                 </td>
             </tr>
             <?php endwhile; ?>

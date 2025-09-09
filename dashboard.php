@@ -14,10 +14,10 @@ if (!isset($_SESSION['user_name'])) {
     <style>
         body {
             min-height: 100vh;
-            background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+            background: linear-gradient(135deg, #ff9966 0%, #ff5e62 100%)#69450ffd;
         }
         .dashboard-card {
-            background: rgba(255,255,255,0.97);
+            background: rgba(255, 255, 255, 0.97);
             border-radius: 1.5rem;
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
             padding: 2.5rem 2rem 2rem 2rem;
@@ -47,15 +47,14 @@ if (!isset($_SESSION['user_name'])) {
 <body>
     <div class="container min-vh-100 d-flex align-items-center justify-content-center flex-column">
         <header class="w-100 mb-4">
-            <div class="text-center py-3 position-relative" style="background: linear-gradient(90deg, #ff9966 0%, #ff5e62 100%); border-radius: 1.5rem; box-shadow: 0 4px 16px rgba(255,94,98,0.10);">
-                <h1 class="fw-bold mb-0 d-inline-block" style="color: #fff; letter-spacing: 2px; font-size: 2.5rem;">Supermart</h1>
+            <div class="text-center py-3 position-relative" style="background: #ffffffff; border-radius: 1.5rem; box-shadow: 0 4px 16px rgba(255,94,98,0.10);">
+                <h1 class="fw-bold mb-0 d-inline-block" style="background: linear-gradient(90deg, #ff9966 0%, #ff5e62 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; letter-spacing: 2px; font-size: 2.5rem;">Supermart</h1>
                 <span tabindex="0" data-bs-toggle="tooltip" title="Supermart is a management system for handling items, customers, orders, and payments efficiently in your retail business." style="cursor:pointer; margin-left: 10px; vertical-align: middle;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" class="bi bi-info-circle" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#ffffffff" class="bi bi-info-circle" viewBox="0 0 16 16">
                         <path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
                         <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 .875-.252 1.02-.797l.088-.416c.066-.308.118-.438.288-.438.145 0 .176.105.145.262l-.088.416c-.194.897.105 1.319.808 1.319.545 0 .875-.252 1.02-.797l.738-3.468c.194-.897-.105-1.319-.808-1.319-.545 0-.875.252-1.02.797l-.088.416c-.066.308-.118.438-.288.438-.145 0-.176-.105-.145-.262l.088-.416c.194-.897-.105-1.319-.808-1.319zM8 5.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1z"/>
                     </svg>
                 </span>
-                <p class="mb-0 text-light" style="font-size: 1.15rem;">Your one-stop solution for smart retail management</p>
             </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

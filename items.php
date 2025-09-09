@@ -8,7 +8,7 @@ $result = $conn->query('SELECT * FROM items');
     <title>Items List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { min-height: 100vh; background: linear-gradient(135deg, #ff9966 0%, #ff5e62 100%); }
+    body { min-height: 100vh; background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%); }
         .main-card { background: rgba(255,255,255,0.98); border-radius: 1.5rem; box-shadow: 0 8px 32px 0 rgba(255,153,102,0.15); padding: 2.5rem 2rem 2rem 2rem; border-top: 6px solid #ff5e62; }
         .table thead { border-radius: 1rem; background: #ff5e62; color: #fff; }
         .table th, .table td { vertical-align: middle; }
